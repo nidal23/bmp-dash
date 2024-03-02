@@ -3,12 +3,13 @@
 import React from 'react';
 import { Project } from '../helper/projectList';
 import { Icon } from '@iconify/react';
+import Link from 'next/link';
 
 interface ProjectProps {
   project: Project;
 }
 
-const ProjectLayout = ({ project: { name, description, githubLink, url, techStack, summary } }: ProjectProps) => {
+const ProjectLayout = ({ project: { name, description, githubLink, url, techStack, summary, slug } }: ProjectProps) => {
   console.log("name", name);
 
   const renderTechStack = () => {
@@ -40,7 +41,7 @@ const ProjectLayout = ({ project: { name, description, githubLink, url, techStac
       </div>
 
       <p className='mt-2'>
-        <a href='#'>Read More</a>
+        <Link href={`/projects/${slug}`}>Read More</Link>
       </p>
     </div>
   );
