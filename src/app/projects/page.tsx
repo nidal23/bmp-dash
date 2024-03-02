@@ -1,20 +1,21 @@
 import React from 'react';
-import { Project } from '@/components/helper/projectList';
+import { Project, projectList } from '@/components/helper/projectList';
+import ProjectLayout from '@/components/ProjectLayout/projectLayout';
 
-interface ProjectProps {
-  projectList: Project[];
-}
+const ProjectsPage = () => {
+  console.log("project list", projectList);
 
-const ProjectsPage: React.FC<ProjectProps> = ({ projectList }: ProjectProps) => {
   return (
-    <div>
-      {projectList ? (projectList.map((project) => (
-        <main key={project.id} className='max-w-5xl py-10 px3 flex flex-col'>
-          <h2 className='font-bold text-lg tracking-tight'>
-            {project.name}
-          </h2>
-        </main>
-      ))):(<p>No Projects to display</p>)}
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+      {projectList.length > 0 ? (
+        projectList.map((project) => (
+          <div key={project.id} className='border border-white rounded-lg'>
+            <ProjectLayout key={project.id} project={project}/>
+          </div>
+        ))
+      ) : (
+        <p>No Projects to display</p>
+      )}
     </div>
   );
 }
