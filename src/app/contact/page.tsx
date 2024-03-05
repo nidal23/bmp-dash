@@ -2,32 +2,33 @@
 
 import React from 'react';
 import { Icon } from '@iconify/react';
+import Link from 'next/link';
 
 const mediums = [
   {
     name: 'Gmail',
     icon: 'mdi:gmail',
-    link: ""
+    link: "mailto:nidalmwork@gmail.com"
   },
-  {
-    name: 'Twitter',
-    icon: 'pajamas:twitter',
-    link: ""
-  },
+  // {
+  //   name: 'Twitter',
+  //   icon: 'pajamas:twitter',
+  //   link: ""
+  // },
   {
     name: 'LinkedIn',
     icon: 'mdi:linkedin',
-    link: ""
+    link: "https://www.linkedin.com/in/nidal-mohammed-959829193/"
   },
   {
     name: 'Medium',
     icon: 'mingcute:medium-fill',
-    link: ""
+    link: "https://medium.com/@nidalm"
   },
   {
     name: 'Github',
     icon: 'mdi:github',
-    link: ""
+    link: "https://github.com/nidal23"
   },
 ];
 
@@ -37,10 +38,10 @@ const ContactPage = () => {
       <div>Reach me</div>
       <div className='flex flex-col gap-2'>
         {mediums.map((app) => (
-          <div key={app.name} className='flex items-center border border-slate-200 rounded-md p-2 px-4 cursor-pointer transition-all duration-300 hover:bg-slate-200 hover:text-black'>
+          <Link href={`${app.link}`} key={app.name} className='flex items-center border border-slate-200 rounded-md p-2 px-4 cursor-pointer transition-all duration-300 hover:bg-slate-200 hover:text-black'>
             <Icon icon={app.icon} className='text-xl mr-2' />
             <div>{app.name}</div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

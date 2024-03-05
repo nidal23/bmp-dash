@@ -3,13 +3,14 @@
 import React from 'react';
 import { Project } from '../helper/projectList';
 import { Icon } from '@iconify/react';
+import Link from 'next/link';
 
 interface ProjectProps {
   project: Project;
 }
 
-const ProjectLayout = ({ project: { name, description, githubLink, url, techStack, summary } }: ProjectProps) => {
-  console.log("name", name);
+const ProjectLayout = ({ project: { name, description, githubLink, url, techStack, summary, slug } }: ProjectProps) => {
+
 
   const renderTechStack = () => {
     return techStack.map((tech, index) => (
@@ -20,11 +21,11 @@ const ProjectLayout = ({ project: { name, description, githubLink, url, techStac
   };
 
   return (
-    <div className='p-3 mx-2 flex flex-col gap-2 justify-center items-center'>
+    <Link href={`/projects/${slug}`} className='p-3 mx-2 flex flex-col gap-2 justify-center items-center hover:cursor-pointer'>
       <h2 className='text-xl font-semibold leading-tight border border-white p-2 rounded-lg bg-white text-black my-2'>{name}</h2>
       <p>{summary}</p>
 
-    <div className=''>
+    <div>
     <div className='flex flex-wrap'>
         {renderTechStack()}
         </div>
@@ -38,11 +39,7 @@ const ProjectLayout = ({ project: { name, description, githubLink, url, techStac
         <Icon icon='mdi:gmail' className='text-3xl mr-2' />
         </a>
       </div>
-
-      <p className='mt-2'>
-        <a href='#'>Read More</a>
-      </p>
-    </div>
+    </Link>
   );
 }
 

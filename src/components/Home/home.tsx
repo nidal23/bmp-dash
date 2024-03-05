@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const HomePage = () => {
   return (
@@ -15,12 +16,13 @@ const HomePage = () => {
         />
       </div>
       <div className="p-2 w-72">
-        <p className="text-violet-300">
-          Hey, I am <span className="text-yellow-300">Nidal</span>. I like to{" "}
-          <span className="text-blue-500">build stuff</span>, and write about
-          them. I believe in{" "}
-          <span className="text-green-400">failing fast</span>, and{" "}
-          <span className="text-red-500 font-bold italic">growing faster</span>.
+        <p className="text-white">
+          Hey, I am <span className="text-yellow-300">Nidal</span>. Welcome to my portfolio, I have kept it short and accurate, you can find my projects <Link href={'/projects'} className=" text-blue-300">here</Link> and my skills <Link href={'/blogs'} className="text-red-300">over-here</Link>.
+        </p>
+      </div>
+      <div>
+        <p>
+          
         </p>
       </div>
     </div>
