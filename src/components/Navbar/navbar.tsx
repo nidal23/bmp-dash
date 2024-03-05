@@ -8,7 +8,7 @@ const links = [
         path: "/"
     },
     {
-        title: "Prod-jects",
+        title: "Projects",
         path: "/projects"
     },
     {

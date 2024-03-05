@@ -38,7 +38,7 @@ const ContactPage = () => {
       <div>Reach me</div>
       <div className='flex flex-col gap-2'>
         {mediums.map((app) => (
-          <Link href={`${app.link}`} key={app.name} className='flex items-center border border-slate-200 rounded-md p-2 px-4 cursor-pointer transition-all duration-300 hover:bg-slate-200 hover:text-black'>
+          <Link href={`${app.link}`} key={app.name} className='flex items-center border border-slate-200 rounded-md p-2 px-4 cursor-pointer transition-all duration-300 hover:bg-slate-200 hover:text-black' target='_blank'>
             <Icon icon={app.icon} className='text-xl mr-2' />
             <div>{app.name}</div>
           </Link>

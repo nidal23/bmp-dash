@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import { useParams } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 import { blogs } from '@/helpers/BlogStorage/blogStorage';
 
 const SingleBlogPage = () => {
@@ -10,14 +10,11 @@ const SingleBlogPage = () => {
   console.log("router", router)
   const { slugs } = router;
 
-  console.log("slug", slugs)
 
   // Find the blog based on the slug
   const blog = blogs.find((blog) => blog.index === Number(slugs));
 
-  if (!blog) {
-    return <div>Blog not found</div>;
-  }
+  if (!blog) notFound();
 
   return (
     <div className='px-2 flex flex-col justify-center gap-8 items-center'>

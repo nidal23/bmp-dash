@@ -17,7 +17,7 @@ const HomePage = () => {
       </div>
       <div className="p-2 w-72">
         <p className="text-white">
-          Hey, I am <span className="text-yellow-300">Nidal</span>. Welcome to my portfolio, I have kept it short and accurate, you can find my projects <Link href={'/projects'} className=" text-blue-300">here</Link> and my skills <Link href={'/blogs'} className="text-red-300">over-here</Link>.
+          Hey, I am <span className="text-yellow-300">Nidal</span>. Welcome to my portfolio, I have kept it short and accurate, you can find my projects <Link href={'/projects'} className=" text-blue-300">here</Link> and my blogs <Link href={'/blogs'} className="text-red-300">over-here</Link>.
         </p>
       </div>
       <div>
