@@ -13,15 +13,19 @@ const ProjectLayout = ({
   project: { name, description, githubLink, url, techStack, summary, slug },
 }: ProjectProps) => {
   const renderTechStack = () => {
-    return techStack.map((tech, index) => (
-      <div
-        key={index}
-        className="border rounded-lg bg-white text-black m-1 p-2 font-semibold"
-      >
-        {tech}
-      </div>
-    ));
-  };
+  return (
+    <div className="flex flex-wrap justify-center">
+      {techStack.slice(0, 4).map((tech, index) => (
+        <div
+          key={index}
+          className="border rounded-lg bg-white text-black m-1 p-2 font-semibold"
+        >
+          {tech}
+        </div>
+      ))}
+    </div>
+  );
+};
 
   return (
     <Link
@@ -35,15 +39,6 @@ const ProjectLayout = ({
 
       <div>
         <div className="flex flex-wrap">{renderTechStack()}</div>
-      </div>
-
-      <div className="flex mt-2">
-        <a href={githubLink} target="_blank" rel="noopener noreferrer">
-          <Icon icon="mdi:github" className=" text-3xl mr-2" />
-        </a>
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          <Icon icon="mdi:gmail" className="text-3xl mr-2" />
-        </a>
       </div>
     </Link>
   );

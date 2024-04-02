@@ -5,10 +5,9 @@ import Link from "next/link";
 const HomePage = () => {
   return (
     <div className="px-2 flex justify-center gap-8 items-center">
-      <div>
-        {/* <p>Nidal Photo</p> */}
+      <div className="-rotate-90">
         <Image
-          src="/../../assets/selfie.jpeg"
+          src="/assets/selfie.jpeg"
           width={250}
           height={140}
           alt="Picture of the author"

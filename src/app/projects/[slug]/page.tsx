@@ -4,6 +4,7 @@ import React from "react";
 import { projectList } from "@/components/helper/projectList";
 import { notFound, useParams } from "next/navigation";
 import { Icon } from "@iconify/react";
+import ReactMarkdown from 'react-markdown';
 
 const Page = () => {
   const router = useParams();
@@ -35,9 +36,9 @@ const Page = () => {
         </div>
       </div>
       <div>
-        <p className='p-4 rounded-md mx-auto text-center text-lg'>
+        <ReactMarkdown className='p-4 rounded-md text-left text-lg'>
             {porject.description}
-        </p>
+        </ReactMarkdown>
       </div>
       <div className="flex gap-4 mt-2">
         <a href={porject.githubLink} target="_blank" rel="noopener noreferrer">
