@@ -12,13 +12,17 @@ const links = [
         path: "/projects"
     },
     {
+        title: "Career",
+        path: '/career'
+    },
+    {
         title: "Blogs",
         path: "/blogs"
     },
     {
         title: "Contact",
         path: "/contact"
-    },
+    }
 ]
 
 const Navbar = () => {
