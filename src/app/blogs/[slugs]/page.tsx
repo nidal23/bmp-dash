@@ -7,7 +7,6 @@ import { blogs } from '@/helpers/BlogStorage/blogStorage';
 const SingleBlogPage = () => {
   const router = useParams();
 
-  console.log("router", router)
   const { slugs } = router;
 
 
