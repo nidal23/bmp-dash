@@ -3,7 +3,6 @@ import { Project, projectList } from '@/components/helper/projectList';
 import ProjectLayout from '@/components/ProjectLayout/projectLayout';
 
 const ProjectsPage = () => {
-  console.log("project list", projectList);
 
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
