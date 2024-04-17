@@ -10,7 +10,7 @@ const HomePage = () => {
       <div className="px-2 w-fit flex justify-center p-8 gap-8 items-center">
         <div className="-rotate-90">
           <Image
-            src="/assets/selfie.jpeg"
+            src="/static/selfie.jpeg"
             width={200}
             height={120}
             alt="Picture of the author"
