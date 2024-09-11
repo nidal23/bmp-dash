@@ -18,8 +18,8 @@ const HomePage = () => {
           />
         </div>
         <div className="p-2 w-96">
-          <p className="text-white">
-            Hey, I am <span className="text-yellow-300">Nidal</span>. Welcome to
+          <p className="text-white font-semibold">
+            Hey there! 👋 I am <span className="text-yellow-300">Nidal</span>. Welcome to
             my portfolio, I have kept it short and accurate, you can find my
             projects{" "}
             <Link href={"/projects"} className=" text-blue-300">
@@ -34,17 +34,17 @@ const HomePage = () => {
         </div>
       </div>
       <div className="w-fit flex flex-col items-center justify-center">
-        <p>Career so far: </p>
-        <div className="w-96 flex flex-col gap-4 h-full rounded-lg p-4 ">
+        <p className="text-yellow-400 font-bold">Career so far: </p>
+        <div className="w-96 flex flex-col gap-4 h-full rounded-lg p-4">
           {experienceList.map((item) => (
             <Link
               href={`/career/${item.id}`}
-              className=" border flex text-white border-white p-2 justify-around items-center text-center rounded-lg hover:cursor-pointer hover:bg-white hover:text-black"
+              className=" border flex font-semibold text-white border-customYellow border-b-4 border-l-4 p-2 justify-around items-center text-center rounded-lg hover:cursor-pointer hover:bg-customYellow hover:text-black"
               key={item.id}
             >
               <div>
                 <span>{item.companyName}</span>
-                <span className="text-xs underline font-mono text-neutral-400 font-extralight">
+                <span className="text-xs underline font-mono font-extralight">
                   ({formatDate(item.startDate)} - {formatEndDate(item.endDate)})
                 </span>
               </div>

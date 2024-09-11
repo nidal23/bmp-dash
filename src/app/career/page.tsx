@@ -13,19 +13,19 @@ const CareerPage = () => {
   return (
     <div className='flex gap-8 justify-center items-center'>
       <div className='w-72'>
-      Hey there! 👋 I am currently in my <span className='text-xl font-bold'>{yoe}rd</span> year of crafting awesome software and continuously learning along the way. Let me take you through my journey so far! 🚀
+      I am currently in my <span className='text-xl font-bold'>{yoe}rd</span> year of crafting awesome software and continuously learning along the way. Let me take you through my journey so far! 🚀
 
       </div>
-      <div className="w-96 flex flex-col gap-4 h-full rounded-lg p-4 ">
+      <div className="w-96 flex flex-col gap-4 h-full rounded-lg p-4">
           {experienceList.map((item) => (
             <Link
               href={`/career/${item.id}`}
-              className=" border flex text-white border-white p-2 justify-around items-center text-center rounded-lg hover:cursor-pointer hover:bg-white hover:text-black"
+              className=" border flex text-white border-customYellow border-b-4 border-l-4 p-2 justify-around items-center text-center rounded-lg hover:cursor-pointer hover:bg-customYellow hover:text-black"
               key={item.id}
             >
               <div>
                 <span>{item.companyName}</span>
-                <span className="text-xs underline font-mono text-neutral-400 font-extralight">
+                <span className="text-xs underline font-mono font-extralight">
                   ({formatDate(item.startDate)} - {formatEndDate(item.endDate)})
                 </span>
               </div>
