@@ -24,7 +24,7 @@ export const experienceList: Experience[] =  [
             'Integrated Kibana for robust data indexing and visualization, enhancing data-driven decision-making processes.',
             'Orchestrated seamless integration of third-party applications including Slack, Salesforce, Gmail, and Google Calendar to streamline operational processes.',
             'Played a pivotal role in the implementation of Cognito for in-app user authentication and authorization, ensuring robust security measures and smooth user experiences.',
-            'These contributions significantly enhanced our products functionality and success.'
+            'Worked on containerizing applications using Docker, setting up Jenkins pipelines for continuous integration, and managing deployments through Azure Container Registry.'
         ]
     },
     {
