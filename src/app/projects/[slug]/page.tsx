@@ -19,7 +19,7 @@ const Page = () => {
     return porject.techStack.map((tech, index) => (
       <div
         key={index}
-        className=" border rounded-lg bg-customYellow text-black m-1 p-2 font-semibold"
+        className="rounded-lg bg-customYellow text-customBlue m-1 p-2 font-semibold text-center"
       >
         {tech}
       </div>
@@ -27,7 +27,7 @@ const Page = () => {
   };
 
   return (
-    <div className="px-2 flex flex-col gap-8 items-center justify-center border border-customYellow border-l-4 border-b-4 rounded-lg mx-auto w-1/2 p-12">
+    <div className="px-2 flex flex-col gap-8 items-center justify-center border-customYellow border border-l-4 border-b-4 rounded-lg mx-auto w-1/2 p-12">
       <div className=" flex gap-8 justify-center items-center">
         <div className="text-customYellow font-bold text-3xl">{porject.name}</div>
         <span className="font-thin text-slate-200 text-sm">built with</span>

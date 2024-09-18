@@ -20,7 +20,7 @@ const CareerPage = () => {
           {experienceList.map((item) => (
             <Link
               href={`/career/${item.id}`}
-              className=" border flex text-white border-customYellow border-b-4 border-l-4 p-2 justify-around items-center text-center rounded-lg hover:cursor-pointer hover:bg-customYellow hover:text-black"
+              className=" border flex text-white border-customYellow border-b-4 border-l-4 p-2 justify-around items-center text-center rounded-lg hover:cursor-pointer hover:bg-customYellow hover:text-customBlue"
               key={item.id}
             >
               <div>
