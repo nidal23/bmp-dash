@@ -13,7 +13,7 @@ const NavLinkPage = ({ title, path }: Item) => {
 
     return (
         <div>
-            <Link className={`${pathName === path && ' bg-customYellow font-bold rounded-lg px-4 p-2 text-black border-none'}`} href={path} key={title}>
+            <Link className={`${pathName === path && ' font-bold text-customYellow'}`} href={path} key={title}>
                 {title}
             </Link>
         </div>

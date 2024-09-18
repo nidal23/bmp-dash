@@ -7,7 +7,7 @@ import { SquareArrowOutUpRight } from "lucide-react";
 const HomePage = () => {
   return (
     <div className="flex justify-around items-center w-full">
-      <div className="px-2 w-fit flex justify-center p-8 gap-8 items-center">
+      <div className="w-fit flex justify-center gap-8 p-16 items-center border-l-4 border-b-4 border-r-4 border-customYellow rounded-sm">
         <div className="-rotate-90">
           <Image
             src="/static/selfie.jpeg"
@@ -33,13 +33,13 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      <div className="w-fit flex flex-col items-center justify-center">
-        <p className="text-yellow-400 font-bold">Career so far: </p>
+      <div className="w-fit flex flex-col items-center justify-center p-16 border-l-4 border-t-4 border-r-4 border-customYellow rounded-sm">
+        <p className="text-customYellow font-bold">Career so far: </p>
         <div className="w-96 flex flex-col gap-4 h-full rounded-lg p-4">
           {experienceList.map((item) => (
             <Link
               href={`/career/${item.id}`}
-              className=" border flex font-semibold text-white border-customYellow border-b-4 border-l-4 p-2 justify-around items-center text-center rounded-lg hover:cursor-pointer hover:bg-customYellow hover:text-black"
+              className=" border flex font-semibold text-white border-customYellow border-b-4 border-l-4 p-2 justify-around items-center text-center rounded-lg hover:cursor-pointer hover:bg-customYellow hover:text-customBlue"
               key={item.id}
             >
               <div>

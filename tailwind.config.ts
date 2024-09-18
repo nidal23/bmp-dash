@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        customYellow: "#C08D00", // Define your custom color here
+        customYellow: "#FA8603", // Define your custom color here
+        customBlue: "#4D5D53",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
